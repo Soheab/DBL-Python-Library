@@ -67,6 +67,7 @@ class DBLClient:
 
     def __init__(self, bot, token, bot_id = None, **kwargs):
         self.bot = bot
+        self.bot_id = bot_id
         self.loop = kwargs.get('loop', bot.loop)
         self.autopost = kwargs.get('autopost')
         self.webhook_port = kwargs.get('webhook_port')
