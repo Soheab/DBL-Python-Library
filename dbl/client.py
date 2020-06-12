@@ -65,9 +65,9 @@ class DBLClient:
         The port to run the webhook on. Will activate webhook when set.
     """
 
-    def __init__(self, bot, token, bot_id = None, **kwargs):
+    def __init__(self, bot, token, **kwargs):
         self.bot = bot
-        self.bot_id = bot_id
+        self.bot_id = kwargs.get('bot_id', None)
         self.loop = kwargs.get('loop', bot.loop)
         self.autopost = kwargs.get('autopost')
         self.webhook_port = kwargs.get('webhook_port')
